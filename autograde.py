@@ -2,11 +2,13 @@
 from pathlib import Path
 import os
 import shutil
+import zipfile
 
 FILEDIR = "./files/"
 ZIPDIR = "./zips/"
 NONBLACKDIR = "./nonblackboard/"
 PROGFILE = 'progs.txt'
+ZIP_EXTRACT_LIST = ['c', 'C', 'h', 'H']
 
 # Remove old output directories
 if os.path.exists(FILEDIR):
@@ -42,7 +44,16 @@ if os.path.exists(NONBLACKDIR):
 # For each of the assignment zip files...
 for file in zipdir.glob('*.zip'):
     # Unzip the assignment into Student dir inside the files directory
-    os.system("unzip -d " + FILEDIR + file.stem + " " + ZIPDIR + file.name)
+    # os.system("unzip -d " + FILEDIR + file.stem + " " + ZIPDIR + file.name)
+    with zipfile.ZipFile(file) as zip:
+        for zip_info in zip.infolist():
+            if zip_info.is_dir():
+                continue
+            extension = zip_info.filename.split(".")[-1]
+            if extension not in ZIP_EXTRACT_LIST :
+                continue
+            zip_info.filename = os.path.basename(zip_info.filename)
+            zip.extract(zip_info, FILEDIR + file.stem)
 
     # Compile every C file in the assignment directory
     student_dir = FILEDIR + file.stem
