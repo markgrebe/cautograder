@@ -31,4 +31,9 @@ for file in zipdir.glob('*.zip'):
     student_path = Path(student_dir)
     for cfile in student_path.glob('*.c'):
         os.system("clang -o " + student_dir + "/" + cfile.stem + " " + 
-                  student_dir + "/" + cfile.name)
+                  student_dir + "/" + cfile.name + 
+                  " 2> " + student_dir + "/" + cfile.stem + ".compile")
+        os.system(student_dir + "/" + cfile.stem + 
+                  " > " + student_dir + "/" + cfile.stem + ".run")
+
+
