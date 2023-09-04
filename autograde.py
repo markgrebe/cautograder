@@ -1,10 +1,21 @@
 #!/Users/markg/.pyenv/shims/python
 from pathlib import Path
 import os
+import shutil
 
-ZIPDIR = "./zips/"
 FILEDIR = "./files/"
+ZIPDIR = "./zips/"
 PROGFILE = 'progs.txt'
+
+# Remove old output directories
+if os.path.exists(FILEDIR):
+    shutil.rmtree(FILEDIR)
+if os.path.exists(ZIPDIR):
+    shutil.rmtree(ZIPDIR)
+
+# Create new output directories
+os.mkdir(FILEDIR)
+os.mkdir(ZIPDIR)
 
 # Get the list of program names from grade.txt
 prog_array = []
@@ -29,18 +40,19 @@ for file in zipdir.glob('*.zip'):
     # Compile every C file in the assignment directory
     student_dir = FILEDIR + file.stem
     student_path = Path(student_dir)
-    #for cfile in student_path.glob('*.c'):
+    # For each of the programs in the assignment
     for prog in prog_array:
+        # Compile the program
         os.system("clang -o " + student_dir + "/" + prog + " " + 
                   student_dir + "/" + prog + ".c" + 
                   " 2> " + student_dir + "/" + prog + ".compile")
+        # If the program has input run it with input file and save the output
         if os.path.isfile(prog + ".input"):
             os.system(student_dir + "/" + prog + 
                       " < ./" + prog + ".input" +
-                      " > " + student_dir + "/" + prog + ".run")
+                      " > " + student_dir + "/" + prog + ".output")
+        # Otherise just run it and save the output
         else:
              os.system(student_dir + "/" + prog + 
-                      " > " + student_dir + "/" + prog + ".run")
+                      " > " + student_dir + "/" + prog + ".output")
            
-
-
