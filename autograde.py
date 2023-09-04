@@ -5,6 +5,7 @@ import shutil
 
 FILEDIR = "./files/"
 ZIPDIR = "./zips/"
+NONBLACKDIR = "./nonblackboard/"
 PROGFILE = 'progs.txt'
 
 # Remove old output directories
@@ -31,6 +32,12 @@ zipdir = Path(ZIPDIR)
 for file in zipdir.glob('*.zip'):
     new_name = file.name.split('_')[-1]
     os.rename(ZIPDIR + file.name, ZIPDIR + new_name)
+
+# Copy any zips that were submitted outside Blackboard
+if os.path.exists(NONBLACKDIR):
+    nonblackdir = PATH(NONBLACKDIR)
+    for file in nonblackdir.glob('*.zip'):
+        os.system("cp " + NONBLACKDIR + "/" + file.name + " " + ZIPDIR)
 
 # For each of the assignment zip files...
 for file in zipdir.glob('*.zip'):
