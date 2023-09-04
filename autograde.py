@@ -34,7 +34,13 @@ for file in zipdir.glob('*.zip'):
         os.system("clang -o " + student_dir + "/" + prog + " " + 
                   student_dir + "/" + prog + ".c" + 
                   " 2> " + student_dir + "/" + prog + ".compile")
-        os.system(student_dir + "/" + prog + 
-                  " > " + student_dir + "/" + prog + ".run")
+        if os.path.isfile(prog + ".input"):
+            os.system(student_dir + "/" + prog + 
+                      " < ./" + prog + ".input" +
+                      " > " + student_dir + "/" + prog + ".run")
+        else:
+             os.system(student_dir + "/" + prog + 
+                      " > " + student_dir + "/" + prog + ".run")
+           
 
 
