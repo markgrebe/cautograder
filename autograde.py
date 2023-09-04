@@ -10,7 +10,7 @@ PROGFILE = 'progs.txt'
 prog_array = []
 with open(PROGFILE) as my_file:
     for line in my_file:
-        prog_array.append(line)
+        prog_array.append(line[:-1])
 
 # Unzip the Blackboard Assignment archive and unzip it into the zips directory
 os.system("unzip -d zips/ gradebook*.zip")
@@ -29,11 +29,12 @@ for file in zipdir.glob('*.zip'):
     # Compile every C file in the assignment directory
     student_dir = FILEDIR + file.stem
     student_path = Path(student_dir)
-    for cfile in student_path.glob('*.c'):
-        os.system("clang -o " + student_dir + "/" + cfile.stem + " " + 
-                  student_dir + "/" + cfile.name + 
-                  " 2> " + student_dir + "/" + cfile.stem + ".compile")
-        os.system(student_dir + "/" + cfile.stem + 
-                  " > " + student_dir + "/" + cfile.stem + ".run")
+    #for cfile in student_path.glob('*.c'):
+    for prog in prog_array:
+        os.system("clang -o " + student_dir + "/" + prog + " " + 
+                  student_dir + "/" + prog + ".c" + 
+                  " 2> " + student_dir + "/" + prog + ".compile")
+        os.system(student_dir + "/" + prog + 
+                  " > " + student_dir + "/" + prog + ".run")
 
 
