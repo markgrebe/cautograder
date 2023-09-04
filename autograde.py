@@ -4,6 +4,13 @@ import os
 
 ZIPDIR = "./zips/"
 FILEDIR = "./files/"
+PROGFILE = 'progs.txt'
+
+# Get the list of program names from grade.txt
+prog_array = []
+with open(PROGFILE) as my_file:
+    for line in my_file:
+        prog_array.append(line)
 
 # Unzip the Blackboard Assignment archive and unzip it into the zips directory
 os.system("unzip -d zips/ gradebook*.zip")
@@ -23,4 +30,5 @@ for file in zipdir.glob('*.zip'):
     student_dir = FILEDIR + file.stem
     student_path = Path(student_dir)
     for cfile in student_path.glob('*.c'):
-        os.system("clang -o " + student_dir + "/" + cfile.stem + " " + student_dir + "/" + cfile.name)
+        os.system("clang -o " + student_dir + "/" + cfile.stem + " " + 
+                  student_dir + "/" + cfile.name)
