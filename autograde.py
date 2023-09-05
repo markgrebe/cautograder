@@ -1,4 +1,7 @@
-
+# Autograder for CS3500 at University of Central Missouri
+# Fall 2023
+# Dr. Mark Grebe
+# grebe@ucmo.edu
 
 from pathlib import Path
 import os
