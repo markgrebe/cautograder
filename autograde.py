@@ -1,4 +1,5 @@
-#!/Users/markg/.pyenv/shims/python
+
+
 from pathlib import Path
 import os
 import shutil
@@ -37,7 +38,7 @@ for file in zipdir.glob('*.zip'):
 
 # Copy any zips that were submitted outside Blackboard
 if os.path.exists(NONBLACKDIR):
-    nonblackdir = PATH(NONBLACKDIR)
+    nonblackdir = Path(NONBLACKDIR)
     for file in nonblackdir.glob('*.zip'):
         os.system("cp " + NONBLACKDIR + "/" + file.name + " " + ZIPDIR)
 
