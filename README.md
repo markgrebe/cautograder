@@ -11,7 +11,7 @@ Any student assignments zip files received outside of blackboard may be placed i
 
 Autograder is ran from the command line in the HW?? directory with the following command:
 ```
-python ../autograder.py
+python3 ../autograder.py
 ```
 
 The autograder will create a HW??/files directory containing a subdirectory for each of the students.
