@@ -1,4 +1,4 @@
-Rubric:
+CS3500 Fall 2023 - HW 3 Rubric:
 ---------
 
 * Each of 3 problems worth 20 points each/60 points total.
