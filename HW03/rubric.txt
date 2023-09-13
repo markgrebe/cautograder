@@ -1,0 +1,15 @@
+Rubric:
+---------
+
+* Each of 3 problems worth 20 points each/60 points total.
+
+Student Error                                   Deduction
+-------------                                   ---------
+Problem Doesn't Compile                         -20 pts
+No Output                                       -20 pts
+Inputs don't match instructions                 - 2 pts
+Output missing (for each part of firstname.c)   - 5 pts
+Output uses wrong formatter/spacing             - 2 pts (each instance)
+Input not used in output                        - 5 pts
+Input uses wrong formatter/spacing              - 2 pts (each instance)
+Output Calculated wrong (download.c/height.c)   - 2 pts
