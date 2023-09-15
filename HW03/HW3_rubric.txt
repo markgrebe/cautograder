@@ -3,6 +3,13 @@ CS3500 Fall 2023 - HW 3 Rubric:
 
 * Each of 3 problems worth 20 points each/60 points total.
 
+Late Assignment:
+-------------
+More than one hour late (after 1am 9/13 and
+   before 11:59pm 9/13)                         -6 points
+After 1am on 9/14 and before 11:59 9/14         -15 points
+After 1am on 9/15                               -60 points (zero)
+
 Student Error                                   Deduction
 -------------                                   ---------
 Problem Doesn't Compile                         -20 pts
