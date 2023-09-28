@@ -1,11 +1,14 @@
 # Autograder for CS3500 at University of Central Missouri
 # Fall 2023
 # Dr. Mark Grebe
-# grebe@ucmo.edu
+# grebe@ucmo.educa
 
 from pathlib import Path
 import os
+import re
 import shutil
+import signal
+import subprocess
 import zipfile
 
 FILEDIR = "./files/"
@@ -13,6 +16,7 @@ ZIPDIR = "./zips/"
 NONBLACKDIR = "./nonblackboard/"
 PROGFILE = 'progs.txt'
 ZIP_EXTRACT_LIST = ['c', 'C', 'h', 'H']
+PROGTIMEOUT = 2
 
 # Remove old output directories
 if os.path.exists(FILEDIR):
@@ -37,7 +41,9 @@ os.system("unzip -d zips/ gradebook*.zip")
 zipdir = Path(ZIPDIR)
 for file in zipdir.glob('*.zip'):
     new_name = file.name.split('_')[-1]
-    os.rename(ZIPDIR + file.name, ZIPDIR + new_name)
+    # Remove version number 
+    new_no_ver_name = re.sub(r' \([0-9]\)','',new_name)
+    os.rename(ZIPDIR + file.name, ZIPDIR + new_no_ver_name)
 
 # Copy any zips that were submitted outside Blackboard
 if os.path.exists(NONBLACKDIR):
@@ -70,11 +76,32 @@ for file in zipdir.glob('*.zip'):
                   " 2> " + student_dir + "/" + prog + ".compile")
         # If the program has input run it with input file and save the output
         if os.path.isfile(prog + ".input"):
-            os.system(student_dir + "/" + prog + 
-                      " < ./" + prog + ".input" +
-                      " > " + student_dir + "/" + prog + ".output")
+            myinput = open("./" + prog + ".input")
+            myoutput = open(student_dir + "/" + prog + ".output", 'w')
+            if os.path.isfile(student_dir + "/" + prog):
+                p = subprocess.Popen(student_dir + "/" + prog, stdin=myinput, stdout=myoutput)
+                try:
+                    p.wait(PROGTIMEOUT)
+                except:
+                    myoutput.write("****** Process Timeout: " + prog + "\n")
+                    p.terminate()
+            else:
+                myoutput.write("****** Executable Not Found: " + prog + "\n")
+            myoutput.flush()
+            myinput.close()
+            myoutput.close()
         # Otherise just run it and save the output
         else:
-             os.system(student_dir + "/" + prog + 
-                      " > " + student_dir + "/" + prog + ".output")
+            myoutput = open(student_dir + "/" + prog + ".output", 'w')
+            if os.path.isfile(student_dir + "/" + prog):
+                p = subprocess.Popen(student_dir + "/" + prog, stdout=myoutput)
+                try:
+                    p.wait(PROGTIMEOUT)
+                except:
+                    myoutput.write("****** Process Timeout: " + prog + "\n")
+                    p.terminate()
+            else:
+                myoutput.write("****** Executable Not Found: " + prog + "\n")
+            myoutput.flush()
+            myoutput.close()
            
