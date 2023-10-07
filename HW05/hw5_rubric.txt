@@ -1,0 +1,35 @@
+In general, with these problems I want to focus the grading on them using pointers correctly, not so much on output format, or algorithm correctness.  We should check the source for each one briefly enough to confirm they did it with pointers.  Doing it without pointers is -20, or 0 for that problem.
+
+I’ve added the HW05 directory, drop the gradebook_*.zip from Blackboard in there, and from that directory, do:
+ 
+python3 ../autograder.py
+ 
+I've updated the autograder to do multiple test cases, and for this assignment larger has 2 test cases.  The *.ouput files will now be named *.output0, *.output1, etc.
+
+On the files not compiling, if it failed to compile due to file name (I saw dollars2.c vs dollars for example), then let’s compile manually and run it, if it’s good, then we take 10 points off).
+If there are errors in the *.compile for the problem, it is a zero for the problem as we stated.   
+ 
+Once again, anything unknown, you give me a list of students/problems and I’ll handle it.   If you can put a draft grade in Blackboard for the problems they got correct, that would be great.
+ 
+Late Assignment:
+-------------
+More than one hour late (after 1am 11/7 and
+   before 11:59pm 11/7)                         -6 points
+After 1am on 11/8 and before 11:59 11/8         -15 points
+After 1am on 11/9                               -60 points (zero)
+
+larger.c (20 points)
+-15 points – no output
+-10 points – Failed both test cases (x and y should both be 10.9 in both)
+-5 points – Failed one test case
+
+doubles.c (20 points)
+-15 points – no output
+-2 points – Sorted order wrong.  (Should be 8.90, 10.20, 45.60)
+ 
+dollars.c (20 points)
+-15 points no output
+-1 point for each output that is wrong (Should be 3-$20, 1-$10, 1-$5, 3-$1).
+ 
+ 
+ 
