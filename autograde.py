@@ -68,6 +68,7 @@ for file in zipdir.glob('*.zip'):
     # Compile every C file in the assignment directory
     student_dir = FILEDIR + file.stem
     student_path = Path(student_dir)
+    homework_path = Path('.')
     # For each of the programs in the assignment
     for prog in prog_array:
         # Compile the program
@@ -76,20 +77,23 @@ for file in zipdir.glob('*.zip'):
                   " 2> " + student_dir + "/" + prog + ".compile")
         # If the program has input run it with input file and save the output
         if os.path.isfile(prog + ".input"):
-            myinput = open("./" + prog + ".input")
-            myoutput = open(student_dir + "/" + prog + ".output", 'w')
-            if os.path.isfile(student_dir + "/" + prog):
-                p = subprocess.Popen(student_dir + "/" + prog, stdin=myinput, stdout=myoutput)
-                try:
-                    p.wait(PROGTIMEOUT)
-                except:
-                    myoutput.write("****** Process Timeout: " + prog + "\n")
-                    p.terminate()
-            else:
-                myoutput.write("****** Executable Not Found: " + prog + "\n")
-            myoutput.flush()
-            myinput.close()
-            myoutput.close()
+            inputnum = 0
+            for inputfile in homework_path.glob(prog + '.input*'):
+                myinput = open(inputfile.name)
+                myoutput = open(student_dir + "/" + prog + ".output" + str(inputnum), 'w')
+                if os.path.isfile(student_dir + "/" + prog):
+                    p = subprocess.Popen(student_dir + "/" + prog, stdin=myinput, stdout=myoutput)
+                    try:
+                        p.wait(PROGTIMEOUT)
+                    except:
+                        myoutput.write("****** Process Timeout: " + prog + "\n")
+                        p.terminate()
+                else:
+                    myoutput.write("****** Executable Not Found: " + prog + "\n")
+                myoutput.flush()
+                myinput.close()
+                myoutput.close()
+                inputnum = inputnum + 1
         # Otherise just run it and save the output
         else:
             myoutput = open(student_dir + "/" + prog + ".output", 'w')
