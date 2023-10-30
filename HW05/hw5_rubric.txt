@@ -6,10 +6,10 @@ python3 ../autograder.py
  
 I've updated the autograder to do multiple test cases, and for this assignment larger has 2 test cases.  The *.ouput files will now be named *.output0, *.output1, etc.
 
-On the files not compiling, if it failed to compile due to file name (I saw dollars2.c vs dollars for example), then let’s compile manually and run it, if it’s good, then we take 10 points off).
+On the files not compiling, if it failed to compile due to file name (I saw dollars2.c vs dollars for example), then let’s compile manually and run it, if it’s good, then we take 10 points off.
 If there are errors in the *.compile for the problem, it is a zero for the problem as we stated.   
  
-Once again, anything unknown, you give me a list of students/problems and I’ll handle it.   If you can put a draft grade in Blackboard for the problems they got correct, that would be great.
+Once again, anything unknown, give me a list of students/problems and I’ll handle it.   If you can put a draft grade in Blackboard for the problems they got correct, that would be great.
  
 Late Assignment:
 -------------
