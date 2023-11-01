@@ -1,0 +1,29 @@
+In general, with these problems I want to focus the grading on them using arrays correctly, not so much on output format.  We should check the source for each one briefly enough to confirm they did it with pointers.  Doing it without arrays is -25, or 0 for that problem. (Note they can either pass array notation or pointer notation and a count, or pointers to the start and end of the array to the functions)
+
+I’ve added the HW06 directory, drop the gradebook_*.zip from Blackboard in there, and from that directory, do:
+ 
+python3 ../autograder.py
+ 
+On the files not compiling, if it failed to compile due to file name (I saw Vance used the wrong zip name format for example), then let’s compile manually and run it, if it’s good, then we take 10 points off.
+If there are errors in the *.compile for the problem, it is a zero for the problem as we stated.   
+ 
+Once again, anything unknown, give me a list of students/problems and I’ll handle it.   If you can put a draft grade in Blackboard for the problems they got correct, that would be great.
+ 
+Late Assignment:
+-------------
+More than one hour late (after 1am 11/1 and
+   before 11:59pm 11/1)                         -5 points
+After 1am on 11/1 and before 11:59 11/1         -12 points
+After 1am on 11/2                               -50 points (zero)
+
+largest.c (25 points) - Should give output of 104 for first test case, and 1015 for 2nd.
+-15 points – no output
+-10 points – Failed both test cases (x and y should both be 10.9 in both)
+-5 points – Failed one test case
+If they made a typo in entering the test array(s), then only take off 1 point.
+
+sum.c (25 points) - Should ouptut an array of 19, 17, 104, 92, 118
+-15 points – no output
+-10 points – Output array wrong.
+If they made a typo in entering the test array(s), then only take off 1 point.
+ 
