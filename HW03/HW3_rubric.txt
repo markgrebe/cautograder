@@ -5,10 +5,10 @@ CS3500 Fall 2023 - HW 3 Rubric:
 
 Late Assignment:
 -------------
-More than one hour late (after 1am 9/13 and
-   before 11:59pm 9/13)                         -6 points
-After 1am on 9/14 and before 11:59 9/14         -15 points
-After 1am on 9/15                               -60 points (zero)
+More than one hour late (after 1am 2/10 and
+   before 1am 2/10)                              -6 points
+After 1am on 2/10 and before 1am 2/11           -15 points
+After 1am on 2/12                               -60 points (zero)
 
 Student Error                                   Deduction
 -------------                                   ---------
