@@ -2,16 +2,16 @@ In general, with these problems I want to focus the grading on them using loops 
  
 python3 ../autograder.py
  
-On the files not compiling, if there are errors in the *.compile for the problem, it is a zero for the problem as we stated.   However, if it failed to compile due to file name (I saw one of these in what was turned in the other day, dollar.c vs dollars.c, then let’s compile manually and run it, if it’s good, then we take x points off (I’m ratcheting that up each assignment).
+On the files not compiling, if there are errors in the *.compile for the problem, it is a zero for the problem as we stated.   However, if it failed to compile due to file name (I saw one of these in what was turned in the other day, dollar.c vs dollars.c, then let’s compile manually and run it, if it’s good, then we take 10 points off (I’m ratcheting that up each assignment).
  
 Anything unknown, you give me a list of students/problems and I’ll handle it.  (Since I know students always get creative with errors 😊 ).  If you can put a draft grade in Blackboard for the problems they got correct, that would be great.
  
 Late Assignment:
 -------------
-More than one hour late (after 1am 9/30 and
-   before 11:59pm 9/30)                         -6 points
-After 1am on 10/1 and before 11:59 10/1         -15 points
-After 1am on 10/2                              -60 points (zero)
+More than one hour late (after 1am 2/17 and
+   before 1am 2/18)                             -6 points
+After 1am on 2/18 and before 1am 2/19          -15 points
+After 1am on 2/19                              -60 points (zero)
 
 dollars.c (20 points)
 -20 points if they didn’t use nested loops to solve it.  i.e., just 5 printf’s, or one loop with 5 printf’s.
