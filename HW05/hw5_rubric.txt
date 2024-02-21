@@ -13,10 +13,10 @@ Once again, anything unknown, give me a list of students/problems and I’ll han
  
 Late Assignment:
 -------------
-More than one hour late (after 1am 11/7 and
-   before 11:59pm 11/7)                         -6 points
-After 1am on 11/8 and before 11:59 11/8         -15 points
-After 1am on 11/9                               -60 points (zero)
+More than one hour late (after 1am 2/24 and
+   before 1am 2/25)                              -6 points
+After 1am on 2/25 and before 1am 2/26           -15 points
+After 1am on 2/26                               -60 points (zero)
 
 larger.c (20 points)
 -15 points – no output
