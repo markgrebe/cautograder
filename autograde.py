@@ -82,7 +82,15 @@ for file in zipdir.glob('*.zip'):
                 myinput = open(inputfile.name)
                 myoutput = open(student_dir + "/" + prog + ".output" + str(inputnum), 'w')
                 if os.path.isfile(student_dir + "/" + prog):
-                    p = subprocess.Popen(student_dir + "/" + prog, stdin=myinput, stdout=myoutput)
+                    inputstart = prog + '.input'
+                    argspath = prog + ".args" + inputfile.name[len(inputstart):]
+                    if os.path.isfile(argspath):
+                        with open(argspath) as my_file:
+                            arglines = my_file.readlines()
+                            args = arglines[0].strip().split()
+                    else:
+                        args = []
+                    p = subprocess.Popen([student_dir + "/" + prog] + args, stdin=myinput, stdout=myoutput)
                     try:
                         p.wait(PROGTIMEOUT)
                     except:
