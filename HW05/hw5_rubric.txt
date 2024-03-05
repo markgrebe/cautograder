@@ -1,4 +1,4 @@
-In general, with these problems I want to focus the grading on them using pointers correctly, not so much on output format, or algorithm correctness.  We should check the source for each one briefly enough to confirm they did it with pointers.  Doing it without pointers is -20, or 0 for that problem.
+In general, with these problems I want to focus the grading on them using pointers correctly, not so much on output format, or algorithm correctness.  We should check the source for each one briefly enough to confirm they did it with pointers.  Doing it without pointers is -20 (-30 for dollars), or 0 for that problem.
 
 I’ve added the HW05 directory, drop the gradebook_*.zip from Blackboard in there, and from that directory, do:
  
@@ -27,9 +27,9 @@ doubles.c (20 points)
 -15 points – no output
 -2 points – Sorted order wrong.  (Should be 8.90, 10.20, 45.60)
  
-dollars.c (20 points)
--15 points no output
--1 point for each output that is wrong (Should be 3-$20, 1-$10, 1-$5, 3-$1).
+dollars.c (30 points)
+-20 points no output
+-3 point for each output that is wrong (Should be 3-$20, 1-$10, 1-$5, 3-$1).
  
  
  
