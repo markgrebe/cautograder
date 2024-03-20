@@ -1,0 +1,46 @@
+The autograder script has been updated to handle command line parameters for test cases, I think it's working well, but email me if you suspect there are issues.
+
+I’ve added the HW07 directory, drop the gradebook_*.zip from Blackboard in there, and from that directory, do:
+ 
+python3 ../autograder.py
+ 
+On the files not compiling, if it failed to compile due to file name, then let’s compile manually and run it, if it’s good, then we take 5 points off.
+If there are errors in the *.compile for the problem, it is a zero for the problem as we stated.   
+ 
+Once again, anything unknown, give me a list of students/problems and I’ll handle it.   If you can put a draft grade in Blackboard for the problems they got correct, that would be great.
+ 
+Late Assignment:
+-------------
+More than one hour late (after 1am 3/23 and
+   before 12:59am 3/23)                         -7 points
+After 1am on 3/23 and before 12:59 3/24         -18 points
+After 1am on 3/24                               -75 points (zero)
+
+reverse.c (25 points) - Should give output for first test case of:
+fifth fourth third second first
+and for the second test case:
+null and void
+
+-20 points – no output
+-15 points – Failed both test cases 
+-5 points – Failed one test case
+
+sum.c (25 points) - Should give output for first test case of:
+Total: 15
+and for the second test case:
+Total: 94
+
+-20 points – no output
+-15 points – Failed both test cases 
+-5 points – Failed one test case
+-2 points - output formattting off (missing Total:, or wrong, but number correct.)
+
+date.c (25 points) - Should give output for first test case of:
+You entered the date February 17, 2011
+and for the second test case:
+You entered the date September 3, 2024
+
+-20 points – no output
+-15 points – Failed both test cases 
+-5 points – Failed one test case
+-2 points - output formattting off (missing "You entered the date", or wrong, but date formatting correct.)
