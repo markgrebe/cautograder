@@ -1,0 +1,35 @@
+I’ve added the HW08 directory, drop the gradebook_*.zip from Blackboard in there, and from that directory, do:
+ 
+python3 ../autograder.py
+ 
+On the files not compiling, if it failed to compile due to file name, then let’s compile manually and run it, if it’s good, then we take 5 points off.
+If there are errors in the *.compile for the problem, it is a zero for the problem as we stated.   
+ 
+Once again, anything unknown, give me a list of students/problems and I’ll handle it.   If you can put a draft grade in Blackboard for the problems they got correct, that would be great.
+ 
+Late Assignment:
+-------------
+More than one hour late (after 1am 3/30 and
+   before 12:59am 3/31)                         -5 points
+After 1am on 3/31 and before 12:59 4/1         -12 points
+After 1am on 4/1                               -50 points (zero)
+
+duplicate.c (25 points) - Should give output of:
+
+This is a test
+Hello from the duplicate!
+
+Also, check to make sure they free the memory returned from duplicate().
+
+-20 points – no output
+-15 points – Failed both test cases 
+-5 points – Failed one test case
+-5 points – Didn't free memory
+
+called.c (25 points) - Should give output of 1 through 10.  (formatting not critical)
+
+Make sure they are using a static variable in times_called() and printing what is returned.
+
+-20 points – no output
+-15 points - Not using static varible or printing what is returned.
+-5 points – Output incorrect, missing values, etc.
