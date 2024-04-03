@@ -96,6 +96,8 @@ for file in zipdir.glob('*.zip'):
                     except:
                         myoutput.write("****** Process Timeout: " + prog + "\n")
                         p.terminate()
+                    myoutput.write("****** Above output generated \n")
+                    myoutput.write("****** with Test Arguments: " + arglines[0] + "\n")
                 else:
                     myoutput.write("****** Executable Not Found: " + prog + "\n")
                 myoutput.flush()
