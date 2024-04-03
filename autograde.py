@@ -78,7 +78,7 @@ for file in zipdir.glob('*.zip'):
         # If the program has input run it with input file and save the output
         if os.path.isfile(prog + ".input"):
             inputnum = 0
-            for inputfile in homework_path.glob(prog + '.input*'):
+            for inputfile in sorted(homework_path.glob(prog + '.input*')):
                 myinput = open(inputfile.name)
                 myoutput = open(student_dir + "/" + prog + ".output" + str(inputnum), 'w')
                 if os.path.isfile(student_dir + "/" + prog):
@@ -96,8 +96,8 @@ for file in zipdir.glob('*.zip'):
                     except:
                         myoutput.write("****** Process Timeout: " + prog + "\n")
                         p.terminate()
-                    myoutput.write("****** Above output generated \n")
-                    myoutput.write("****** with Test Arguments: " + arglines[0] + "\n")
+                    # myoutput.write("****** Above output generated \n")
+                    # myoutput.write("****** with Test Arguments: " + arglines[0] + "\n")
                 else:
                     myoutput.write("****** Executable Not Found: " + prog + "\n")
                 myoutput.flush()
