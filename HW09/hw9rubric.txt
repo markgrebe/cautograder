@@ -1,0 +1,55 @@
+I’ve added the HW09 directory, drop the gradebook_*.zip from Blackboard in there, and from that directory, do:
+ 
+python3 ../autograder.py
+ 
+On the files not compiling, if it failed to compile due to file name, then let’s compile manually and run it, if it’s good, then we take 5 points off.
+If there are errors in the *.compile for the problem, it is a zero for the problem as we stated.   
+ 
+Once again, anything unknown, give me a list of students/problems and I’ll handle it.   If you can put a draft grade in Blackboard for the problems they got correct, that would be great.
+ 
+Late Assignment:
+-------------
+More than one hour late (after 1am 4/6 and
+   before 12:59am 4/7)                         -7 points
+After 1am on 4/7 and before 12:59 4/8          -18 points
+After 1am on 4/8                               -70 points (zero)
+
+twofiles.c (35 points) - Should give output of:
+
+Test Case 1 (No command line parameters):
+Usage: twofiles filename1 filename2
+
+Test Case 2 (Can't open file 1 - bad name):
+Unable to open file.
+
+Test Case 3 (Can't open file 2 - bad name):
+Unable to open file.
+
+Test Case 4 (Sucesss case):
+Line 1 of File 1
+Line 1 of File 2
+Line 2 of File 1
+Line 2 of File 2
+Line 3 of File 2
+Line 4 of File 2
+
+-5 points - Fails test case 1, 2, or 3 (5 points for each)
+-20 points – no output for test case 4
+-10 points – Incorrect output for Test Case 4 
+
+search.c (35 points) - Should give output of:
+
+Test Case 1 (No command line parameters):
+Usage: search string filename
+
+Test Case 2 (Can't open search file - bad name):
+Unable to open file.
+
+Test Case 4 (Sucesss case):
+Only lines with Waldo should be printed.
+It also shouldn't be confused withe the Waldo neighborhood in KC.
+This concludes the Where's Waldo game.....
+
+-5 points - Fails test case 1 or 2 (5 points for each)
+-25 points – no output for test case 3
+-15 points – Incorrect output for Test Case 3 
