@@ -1,0 +1,20 @@
+For this homework, there is a different script, since this one had two source files and a header file, so I did a hardcoded script specifically for this one.  So add the grade book file to the HW010 directory, and then run from the HW010 directory the following:
+
+python3 ../autograde_hw10.py
+
+As opposed to points off, I think I want to do additive points, so if they do the  part correct, they get the points for it:
+
+Chess.h
+    a)  5 points
+    b)  5 points
+    c)  2 points
+
+Square.c:
+    b) 15 points
+
+Chess.c:
+    b) 3 points
+    c) 10 points
+    d) 10 points
+
+Based on last semester, 2/3 of them were easy, but the other 1/3 were hard to grade. Leave the hard ones you don't know for me again.  Last semster, someone had a hard path in the header name, so if you want to edit that and recompile, only take off 2 points for that.
