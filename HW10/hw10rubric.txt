@@ -2,6 +2,13 @@ For this homework, there is a different script, since this one had two source fi
 
 python3 ../autograde_hw10.py
 
+Late Assignment:
+-------------
+More than one hour late (after 1am 4/13 and
+   before 12:59am 4/14)                         -5 points
+After 1am on 4/14 and before 12:59 4/14         -12 points
+After 1am on 4/15                               -50 points (zero)
+
 As opposed to points off, I think I want to do additive points, so if they do the  part correct, they get the points for it:
 
 Chess.h
