@@ -1,0 +1,40 @@
+For this homework, there is a different script, since this one had two source files and a header file, so I did a hardcoded script specifically for this one.  So add the grade book file to the HW11 directory, and then run from the HW11 directory the following:
+
+python3 ../autograde_hw11.py
+
+On the files not compiling, if it failed to compile due to file name, then let’s compile manually and run it, if it’s good, then we take 5 points off.
+If there are errors in the *.compile for the problem, it is a zero for the problem as we stated.   
+ 
+Once again, anything unknown, give me a list of students/problems and I’ll handle it.   If you can put a draft grade in Blackboard for the problems they got correct, that would be great.
+ 
+Late Assignment:
+-------------
+More than one hour late (after 1am 4/20 and
+   before 12:59am 4/21)                         -3 points
+After 1am on 4/21 and before 12:59 4/21         -8 points
+After 1am on 4/22                               -35 points (zero)
+
+calc.c (20 points) - Should give output of:
+
+6.100
+18.300
+5.000
+7.700
+
+THose are teh correct ansswers for th etest input, they may print more for each one, as long as the correct number is present.
+
+-4 points - For each of the results that are wrong.
+-20 points – no output 
+
+cond.c (35 points) - Should give output of:
+
+Test Case 1 - cond.output0 (FIRST is defined):
+I print if FIRST is defined
+
+Test Case 2 - cond.output1 (SECOND is defined):
+I print if SECOND is defined
+
+Test Case 3 - cond.output2 (FIRST and SECOND are defined):
+I print if FIRST and SECOND are defined
+
+-5 points - Fails test case 1, 2, or 3 (5 points for each)
