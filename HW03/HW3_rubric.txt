@@ -5,6 +5,21 @@ CS3500 Fall 2024 - HW 3 Rubric:
   firstname.c make sure that they use formatters to do the output
   not just printing fixed strings.
 
+To run the autograder, drop the gradebook_*.zip from Blackboard in
+the HW03 directory, and from that directory in the terminal shell, do:
+ 
+python3 ../autograder.py
+ 
+On the files not compiling, if there are errors in the *.compile for 
+the problem,it is a zero for the problem as stated below.   However, 
+if it failed to compile due to file name (for example toes.c vs Toes.c), 
+then let’s compile manually and run it, if it’s good,
+then we take 5 points off (I’m ratcheting that up each assignment).
+ 
+Anything unknown, give me a list of students/problems and I can give instructions or grade it.
+(Since I know students always get creative with errors 😊 ). 
+If you can put a draft grade in Blackboard for the problems they got correct, that would be great.
+
 * firstname.c - This assignment should be all in 1 program. 
   and each part (a,b,c,d) should be printed on a seperate line, 
   so don't forget the newline charaacter.
