@@ -1,14 +1,30 @@
-CS3500 Fall 2023 - HW 3 Rubric:
+CS3500 Fall 2024 - HW 3 Rubric:
 ---------
 
-* Each of 3 problems worth 20 points each/60 points total.
+* Each of 3 problems worth 20 points each/60 points total. On 
+  firstname.c make sure that they use formatters to do the output
+  not just printing fixed strings.
+
+* firstname.c - This assignment should be all in 1 program. 
+  and each part (a,b,c,d) should be printed on a seperate line, 
+  so don't forget the newline charaacter.
+
+* height.c - The program should prompt the user for the height, 
+  then let user enter it, then prompt for the name, 
+  and let user enter it.  Both the format specifiers for height 
+  should be floats, as well as the variable to store it.
+
+* download.c - The program should prompt the user for the download 
+  speed, then let the user enter it, then prompt for the size of 
+  the file, and let the user enter it.  All of the format specifiers 
+  should be floats, as well as the variables to store them.
 
 Late Assignment:
 -------------
-More than one hour late (after 1am 2/10 and
-   before 1am 2/10)                              -6 points
-After 1am on 2/10 and before 1am 2/11           -15 points
-After 1am on 2/12                               -60 points (zero)
+More than one hour late (after 1am 9/21 and
+   before 1am 9/22)                              -6 points
+After 1am on 9/22 and before 1am 9/23           -15 points
+After 1am on 9/23                               -60 points (zero)
 
 Student Error                                   Deduction
 -------------                                   ---------
