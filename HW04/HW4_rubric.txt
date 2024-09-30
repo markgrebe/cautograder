@@ -1,20 +1,28 @@
-In general, with these problems I want to focus the grading on them using loops correctly, not so much on output format.  I’ve updated the autograder for the timeout, and added the HW04 directory, drop the gradebook_*.zip from Blackboard in there, and from that directory, do:
+In general, with these problems I want to focus the grading on them using loops correctly, 
+not so much on output format.  Drop the gradebook_*.zip from Blackboard in there, and from 
+that directory, do:
  
 python3 ../autograder.py
  
-On the files not compiling, if there are errors in the *.compile for the problem, it is a zero for the problem as we stated.   However, if it failed to compile due to file name (I saw one of these in what was turned in the other day, dollar.c vs dollars.c, then let’s compile manually and run it, if it’s good, then we take 10 points off (I’m ratcheting that up each assignment).
+On the files not compiling, if there are errors in the *.compile for the problem, it is a zero 
+for the problem as we stated.   However, if it failed to compile due to file name then 
+let’s compile manually and run it, if it’s good, then we take 10 points off 
+(I’m ratcheting that up each assignment).
  
-Anything unknown, you give me a list of students/problems and I’ll handle it.  (Since I know students always get creative with errors 😊 ).  If you can put a draft grade in Blackboard for the problems they got correct, that would be great.
+Anything unknown, you give me a list of students/problems and I’ll handle it.  
+(Since I know students always get creative with errors 😊 ).  If you can put a draft 
+grade in Blackboard for the problems they got correct, that would be great.
  
 Late Assignment:
 -------------
-More than one hour late (after 1am 2/17 and
-   before 1am 2/18)                             -6 points
-After 1am on 2/18 and before 1am 2/19          -15 points
-After 1am on 2/19                              -60 points (zero)
+More than one hour late (after 1am 10/3 and
+   before 1am 10/4)                             -6 points
+After 1am on 10/4 and before 1am 10/5          -15 points
+After 1am on 10/5                              -60 points (zero)
 
 dollars.c (20 points)
--20 points if they didn’t use nested loops to solve it.  i.e., just 5 printf’s, or one loop with 5 printf’s.
+-20 points if they didn’t use nested loops to solve it.  i.e., just 5 printf’s, 
+    or one loop with 5 printf’s.
 -5 points – number of rows or number of columns wrong.
 -1 point – wrong character
 -0 points – extra spaces, I don’t care on that….
