@@ -1,20 +1,18 @@
-The autograder script has been updated to handle command line parameters for test cases, I think it's working well, but email me if you suspect there are issues.
-
-I’ve added the HW07 directory, drop the gradebook_*.zip from Blackboard in there, and from that directory, do:
+To run the autograder, drop the gradebook_*.zip from Blackboard in HW07 directory, and from that directory, do:
  
 python3 ../autograder.py
  
-On the files not compiling, if it failed to compile due to file name, then let’s compile manually and run it, if it’s good, then we take 5 points off.
+On the files not compiling, if it failed to compile due to file name, then let’s compile manually and run it, if it’s good, then we take 10 points off.
 If there are errors in the *.compile for the problem, it is a zero for the problem as we stated.   
  
 Once again, anything unknown, give me a list of students/problems and I’ll handle it.   If you can put a draft grade in Blackboard for the problems they got correct, that would be great.
  
 Late Assignment:
 -------------
-More than one hour late (after 1am 3/23 and
-   before 12:59am 3/23)                         -7 points
-After 1am on 3/23 and before 12:59 3/24         -18 points
-After 1am on 3/24                               -75 points (zero)
+More than one hour late (after 1am 11/5 and
+   before 12:59am 11/6)                         -7 points
+After 1am on 11/6 and before 12:59 11/7         -18 points
+After 1am on 11/7                               -75 points (zero)
 
 reverse.c (25 points) - Should give output for first test case of:
 fifth fourth third second first
